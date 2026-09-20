@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <form action="/edit/<%= user.id %>" method="post">
+        <a href="/view" class="link">Go to users</a>
+        <h2>Update User</h2>
+        <div class="name">
+            <input type="text" value="<%= user.name %>" name="oldName" readonly>
+            <input type="text" placeholder="Enter new name" name="name">
+        </div>
+        <div class="role">
+            <input type="text" value="<%= user.role %>" name="oldRole" readonly>
+            <input type="text" placeholder="Enter new profession?" name="role">
+        </div>
+        <div class="img">
+            <input type="text" value="<%= user.image %>" name="oldImage" readonly>
+            <input type="text" placeholder="Enter new image url" name="image">
+        </div>
+        <button class="btn update">Update User</button>
+    </form>
+</body>
+</html>
